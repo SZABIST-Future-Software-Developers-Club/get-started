@@ -1,2 +1,563 @@
-<h4>SZABIST Future Software Developers Club (SFSDC)</h4>
-<p>SZABIST Future Software Developers CLUB (SFSDC) is the premier technology club at SZABIST University, operating under the Student Societies Council (SSC).</p>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>SFSDC | SZABIST Future Software Developers Club</title>
+    <meta name="description" content="SZABIST Future Software Developers Club (SFSDC) is the premier technology club at SZABIST University. Coding the Future, Developing Minds. Join us for workshops, hackathons, and tech innovation.">
+    <meta name="keywords" content="SFSDC, SZABIST, Software Developers Club, Karachi Tech, MERN Stack, Flutter, Python, AI ML, Hackathons, Competitive Programming, Web Development, Mobile App Development">
+    <meta name="author" content="SZABIST Future Software Developers Club">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://szabist-future-software-developers-club.github.io/get-started/">
+    <meta property="og:title" content="SFSDC | SZABIST Future Software Developers Club">
+    <meta property="og:description" content="Building SZABIST's largest community of developers, innovators, and tech leaders. Coding the Future, Developing Minds.">
+    <meta property="og:image" content="assets/logo-horizontal.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://szabist-future-software-developers-club.github.io/get-started/">
+    <meta property="twitter:title" content="SFSDC | SZABIST Future Software Developers Club">
+    <meta property="twitter:description" content="Building SZABIST's largest community of developers, innovators, and tech leaders.">
+    <meta property="twitter:image" content="assets/logo-horizontal.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo-square.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sfsdc-dark': '#0A2A5C', // Deep blue from logo
+                        'sfsdc-blue': '#1E88E5', // Bright blue from logo
+                        'sfsdc-silver': '#B0BEC5', // Silver/metallic from logo
+                        'sfsdc-light': '#F8F9FA',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "SZABIST Future Software Developers Club",
+      "alternateName": "SFSDC",
+      "url": "https://szabist-future-software-developers-club.github.io/get-started/",
+      "logo": "assets/logo-horizontal.png",
+      "description": "The premier technology club at SZABIST University, operating under the Student Societies Council (SSC).",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "SFSDC, SSC Office, 100 Campus, SZABIST University, Block 5 Clifton",
+        "addressLocality": "Karachi",
+        "postalCode": "75600",
+        "addressCountry": "PK"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+92-315-2260604",
+        "contactType": "customer service",
+        "email": "support.sfsdc@gmail.com"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/sfsdc.ssc.szabist",
+        "https://www.facebook.com/sfsdc.ssc.szabist/",
+        "https://www.instagram.com/sfsdc.ssc.szabist/",
+        "https://github.com/SZABIST-Future-Software-Developers-Club"
+      ]
+    }
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-sfsdc-light antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-sfsdc-dark text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Replace src with your actual logo path -->
+                    <img class="h-12 w-auto" src="assets/logo-square.png" alt="SFSDC Logo">
+                    <span class="font-display font-bold text-xl hidden sm:block">SFSDC</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wider">
+                    <a href="#about" class="hover:text-sfsdc-blue transition">About</a>
+                    <a href="#activities" class="hover:text-sfsdc-blue transition">Activities</a>
+                    <a href="#specialties" class="hover:text-sfsdc-blue transition">Specialties</a>
+                    <a href="#committee" class="hover:text-sfsdc-blue transition">Committee</a>
+                    <a href="#president" class="hover:text-sfsdc-blue transition">President</a>
+                    <a href="#contact" class="bg-sfsdc-blue hover:bg-blue-600 px-5 py-2 rounded-full transition">Contact Us</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-sfsdc-blue focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-sfsdc-dark border-t border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">About</a>
+                <a href="#activities" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">Activities</a>
+                <a href="#specialties" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">Specialties</a>
+                <a href="#committee" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">Committee</a>
+                <a href="#president" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">President</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-sfsdc-dark text-white overflow-hidden">
+        <div class="absolute inset-0">
+            <img class="w-full h-full object-cover opacity-20" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Team collaborating on software">
+            <div class="absolute inset-0 bg-gradient-to-r from-sfsdc-dark to-sfsdc-dark/80"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 flex flex-col items-center text-center">
+            <!-- Replace src with your actual horizontal logo path -->
+            <img class="h-28 md:h-36 w-auto mb-8 drop-shadow-xl" src="assets/logo-horizontal.png" alt="SFSDC Full Logo">
+            <h1 class="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6">
+                Coding the Future, <span class="text-sfsdc-blue">Developing Minds.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl text-xl text-gray-300 mb-10">
+                The premier technology club at SZABIST University, bridging the gap between academia and industry.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://forms.gle/rc2qcRajJQksgqvG8" target="_blank" rel="noopener noreferrer" class="bg-sfsdc-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-user-plus mr-2"></i> Register Now
+                </a>
+                <a href="https://calendar.app.google/cYxegPimRruYRomL7" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white hover:bg-white hover:text-sfsdc-dark text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    <i class="far fa-calendar-alt mr-2"></i> Book Interview Slot
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-sfsdc-dark inline-block border-b-4 border-sfsdc-blue pb-2">About SFSDC</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            <strong>SZABIST Future Software Developers Club (SFSDC)</strong> is the premier technology club at SZABIST University, operating under the Student Societies Council (SSC). We are a non-profit organization dedicated to fostering technical excellence and innovation.
+                        </p>
+                        <div class="bg-sfsdc-light p-6 rounded-lg border-l-4 border-sfsdc-blue shadow-sm mb-6">
+                            <h3 class="text-xl font-bold text-sfsdc-dark mb-2"><i class="fas fa-eye text-sfsdc-blue mr-2"></i> Our Vision</h3>
+                            <p class="text-gray-700">To build SZABIST's largest community of developers, innovators, and tech leaders.</p>
+                        </div>
+                        <div class="bg-sfsdc-light p-6 rounded-lg border-l-4 border-sfsdc-dark shadow-sm">
+                            <h3 class="text-xl font-bold text-sfsdc-dark mb-2"><i class="fas fa-bullseye text-sfsdc-blue mr-2"></i> Our Mission & Objectives</h3>
+                            <p class="text-gray-700">To bridge the gap between academia and industry by empowering students with practical skills.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-sfsdc-dark text-white p-6 rounded-lg text-center shadow-md">
+                            <i class="fas fa-laptop-code text-4xl text-sfsdc-blue mb-4"></i>
+                            <h4 class="font-bold text-lg">Practical Skills</h4>
+                        </div>
+                        <div class="bg-sfsdc-blue text-white p-6 rounded-lg text-center shadow-md">
+                            <i class="fas fa-network-wired text-4xl text-white mb-4"></i>
+                            <h4 class="font-bold text-lg">Industry Connect</h4>
+                        </div>
+                        <div class="bg-sfsdc-silver text-sfsdc-dark p-6 rounded-lg text-center shadow-md">
+                            <i class="fas fa-rocket text-4xl text-sfsdc-dark mb-4"></i>
+                            <h4 class="font-bold text-lg">Innovation</h4>
+                        </div>
+                        <div class="bg-gray-100 text-sfsdc-dark p-6 rounded-lg text-center shadow-md border border-gray-200">
+                            <i class="fas fa-users text-4xl text-sfsdc-blue mb-4"></i>
+                            <h4 class="font-bold text-lg">Community</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section id="activities" class="py-20 bg-sfsdc-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-sfsdc-dark inline-block border-b-4 border-sfsdc-blue pb-2">Core Activities & Events</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Activity 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-sfsdc-blue">
+                        <div class="w-14 h-14 bg-sfsdc-dark rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-code text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-sfsdc-dark mb-3">Technical Workshops</h3>
+                        <p class="text-gray-600">MERN Stack, Flutter, Python, AI/ML, Git & GitHub.</p>
+                    </div>
+                    <!-- Activity 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-sfsdc-blue">
+                        <div class="w-14 h-14 bg-sfsdc-dark rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-trophy text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-sfsdc-dark mb-3">Competitive Programming</h3>
+                        <p class="text-gray-600">Code Sprints, Hackathons, ICPC Preparation.</p>
+                    </div>
+                    <!-- Activity 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-sfsdc-blue">
+                        <div class="w-14 h-14 bg-sfsdc-dark rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-paint-brush text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-sfsdc-dark mb-3">UI/UX & Product Design</h3>
+                        <p class="text-gray-600">Designathons and Portfolio Building.</p>
+                    </div>
+                    <!-- Activity 4 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-sfsdc-blue">
+                        <div class="w-14 h-14 bg-sfsdc-dark rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-handshake text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-sfsdc-dark mb-3">Industry Connect</h3>
+                        <p class="text-gray-600">Tech Talks, Alumni Sessions, Career Seminars with Software Houses.</p>
+                    </div>
+                    <!-- Activity 5 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-sfsdc-blue">
+                        <div class="w-14 h-14 bg-sfsdc-dark rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-lightbulb text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-sfsdc-dark mb-3">Project Incubation</h3>
+                        <p class="text-gray-600">Supporting student Final Year Projects (FYPs) to startups.</p>
+                    </div>
+                    <!-- Activity 6 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-sfsdc-blue">
+                        <div class="w-14 h-14 bg-sfsdc-dark rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-hands-helping text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-sfsdc-dark mb-3">Community Service</h3>
+                        <p class="text-gray-600">Open-Source Contributions & Peer-to-Peer Learning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialties Section -->
+        <section id="specialties" class="py-20 bg-sfsdc-dark text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold inline-block border-b-4 border-sfsdc-blue pb-2">Our Specialties</h2>
+                </div>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Software Engineering</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Computer Science</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Web Development</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Mobile App Development</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Artificial Intelligence & ML</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Data Science</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Competitive Programming</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Cloud Computing</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Cyber Security</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Full Stack Development</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">UI/UX Design</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">DevOps</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Open-Source Contribution</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Student Leadership</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Tech Workshops</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Hackathons</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Career Development</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Professional Networking</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Information Technology</span>
+                    <span class="bg-sfsdc-blue/20 border border-sfsdc-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sfsdc-blue transition cursor-default">Tech Innovation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Committee Section -->
+        <section id="committee" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-sfsdc-dark inline-block border-b-4 border-sfsdc-blue pb-2">Our Leadership</h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Meet the dedicated team driving the vision of SFSDC forward.</p>
+                </div>
+
+                <!-- Executive Committee -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-sfsdc-dark mb-6 flex items-center"><i class="fas fa-crown text-sfsdc-blue mr-3"></i> Executive Committee (EC)</h3>
+                    <p class="text-gray-600 mb-8">The strategic leadership team responsible for governance, university liaison, and final decision-making.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-sfsdc-light p-6 rounded-lg shadow-sm border border-gray-100">
+                            <h4 class="font-bold text-lg text-sfsdc-dark">President/Chairperson</h4>
+                            <p class="text-sm text-gray-600 mt-2">Overlooks all club operations, aligns strategies with the SZABIST Student Council (SSC), and serves as the primary representative.</p>
+                        </div>
+                        <div class="bg-sfsdc-light p-6 rounded-lg shadow-sm border border-gray-100">
+                            <h4 class="font-bold text-lg text-sfsdc-dark">General Secretary</h4>
+                            <p class="text-sm text-gray-600 mt-2">Manages internal operations, coordinates between different club departments, manages documentation, official correspondence, meeting minutes, and club records.</p>
+                        </div>
+                        <div class="bg-sfsdc-light p-6 rounded-lg shadow-sm border border-gray-100">
+                            <h4 class="font-bold text-lg text-sfsdc-dark">Treasurer / Finance Director</h4>
+                            <p class="text-sm text-gray-600 mt-2">Manages the club's budget, funding requests through the SSC, and financial tracking for events.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Committee -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-sfsdc-dark mb-6 flex items-center"><i class="fas fa-users-cog text-sfsdc-blue mr-3"></i> Core Committee (Directors, Heads & Leads)</h3>
+                    <p class="text-gray-600 mb-8">The execution team responsible for leading specific departments and organizing technical initiatives.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-2 border-sfsdc-blue">
+                            <h4 class="font-bold text-md text-sfsdc-dark">Director - Software Development</h4>
+                            <p class="text-sm text-gray-600 mt-1">To lead all technical projects, workshops and developer teams.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-2 border-sfsdc-blue">
+                            <h4 class="font-bold text-md text-sfsdc-dark">Director - UI/UX</h4>
+                            <p class="text-sm text-gray-600 mt-1">To lead design language, posters, and product design sessions.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-2 border-sfsdc-blue">
+                            <h4 class="font-bold text-md text-sfsdc-dark">Director - Competitive Programming & Hackathons</h4>
+                            <p class="text-sm text-gray-600 mt-1">To organize coding contests, hackathons and training sessions.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-2 border-sfsdc-blue">
+                            <h4 class="font-bold text-md text-sfsdc-dark">Director - Marketing & PR</h4>
+                            <p class="text-sm text-gray-600 mt-1">To manage social media, content creation, and university outreach.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-2 border-sfsdc-blue">
+                            <h4 class="font-bold text-md text-sfsdc-dark">Technical Lead</h4>
+                            <p class="text-sm text-gray-600 mt-1">Oversees coding bootcamps, hackathons, and curriculum design for BSCS/BSSE students.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-2 border-sfsdc-blue">
+                            <h4 class="font-bold text-md text-sfsdc-dark">Operations & Logistics Lead</h4>
+                            <p class="text-sm text-gray-600 mt-1">Handles venue bookings, equipment setup, and event flow management at SZABIST.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-2 border-sfsdc-blue">
+                            <h4 class="font-bold text-md text-sfsdc-dark">Marketing & PR Lead</h4>
+                            <p class="text-sm text-gray-600 mt-1">Manages the club's campus presence, announcements, and outreach to the student body.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-2 border-sfsdc-blue">
+                            <h4 class="font-bold text-md text-sfsdc-dark">Graphics & Media Lead</h4>
+                            <p class="text-sm text-gray-600 mt-1">Responsible for designing visual assets, posters, social media banners, and event photography.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- General Body -->
+                <div>
+                    <h3 class="text-2xl font-bold text-sfsdc-dark mb-6 flex items-center"><i class="fas fa-user-friends text-sfsdc-blue mr-3"></i> General Body Subcommittee (Officers / Associates)</h3>
+                    <p class="text-gray-600 mb-8">The entry-level execution workforce. These positions are perfect for junior students looking to gain experience.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-sfsdc-dark text-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg mb-2">Technical Officers</h4>
+                            <p class="text-sm text-gray-300">Assist in conducting coding workshops, mentoring peers, and evaluating coding challenges.</p>
+                        </div>
+                        <div class="bg-sfsdc-dark text-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg mb-2">Operations & PR Officers</h4>
+                            <p class="text-sm text-gray-300">Help with on-ground event management, registrations, and classroom promotions.</p>
+                        </div>
+                        <div class="bg-sfsdc-dark text-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg mb-2">Content Writers & Designers</h4>
+                            <p class="text-sm text-gray-300">Draft captions, write newsletters, and create digital graphics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- President Profile Section -->
+        <section id="president" class="py-20 bg-sfsdc-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-sfsdc-dark inline-block border-b-4 border-sfsdc-blue pb-2">Meet Our President</h2>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                    <div class="md:w-1/3 bg-sfsdc-dark p-8 flex flex-col items-center justify-center text-center text-white">
+                        <div class="w-32 h-32 bg-sfsdc-silver rounded-full flex items-center justify-center mb-4 border-4 border-white shadow-lg">
+                            <i class="fas fa-user-tie text-5xl text-sfsdc-dark"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Ashfaq Ali Zardari</h3>
+                        <p class="text-sfsdc-blue font-semibold mt-2">President / Chairperson</p>
+                        <p class="text-sm mt-1 text-gray-300">Sr. Software Engineer & Founder</p>
+                        <div class="flex space-x-4 mt-6">
+                            <a href="https://www.linkedin.com/in/ashfaqalizardari/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-sfsdc-blue transition"><i class="fab fa-linkedin text-2xl"></i></a>
+                            <a href="https://github.com/AshfaqAliZardariOfficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-sfsdc-blue transition"><i class="fab fa-github text-2xl"></i></a>
+                            <a href="https://www.facebook.com/ashfaqalizardariofficial/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-sfsdc-blue transition"><i class="fab fa-facebook text-2xl"></i></a>
+                            <a href="https://www.instagram.com/ashfaqalizardariofficial/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-sfsdc-blue transition"><i class="fab fa-instagram text-2xl"></i></a>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8 md:p-12">
+                        <h4 class="text-xl font-bold text-sfsdc-dark mb-4">Background & Education</h4>
+                        <p class="text-gray-700 mb-4">
+                            Ashfaq Ali Zardari is a Pakistani Sr. software engineer, developer, and founder based in Karachi. He is currently pursuing his Bachelor of Science in Computer Science (BSCS) at SZABIST University, alongside prior diplomas in software engineering from Aptech Learning.
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            Professionally, he specializes in .NET technologies, Web APIs, and SQL. In 2023, he founded <strong>Ashfaq Ali Zardari Store LLP</strong>, a software development and digital goods company in Karachi.
+                        </p>
+                        
+                        <h4 class="text-xl font-bold text-sfsdc-dark mb-4">Featured Mobile Applications</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <a href="https://play.google.com/store/apps/details?id=io.github.ashfaqalizardaristoreinc.ledgr" target="_blank" rel="noopener noreferrer" class="flex items-start p-3 bg-sfsdc-light rounded-lg hover:bg-gray-100 transition border border-gray-200">
+                                <i class="fab fa-google-play text-sfsdc-blue mt-1 mr-3"></i>
+                                <div>
+                                    <h5 class="font-bold text-sfsdc-dark text-sm">Ledgr: Offline Finance Ledger</h5>
+                                    <p class="text-xs text-gray-600">Fast, private finance ledger for shopkeepers & freelancers.</p>
+                                </div>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=io.github.ashfaqalizardaristoreinc.idla" target="_blank" rel="noopener noreferrer" class="flex items-start p-3 bg-sfsdc-light rounded-lg hover:bg-gray-100 transition border border-gray-200">
+                                <i class="fab fa-google-play text-sfsdc-blue mt-1 mr-3"></i>
+                                <div>
+                                    <h5 class="font-bold text-sfsdc-dark text-sm">Noor ul Quran – Quran Videos</h5>
+                                    <p class="text-xs text-gray-600">Free, ad-free Islamic app for Quran videos.</p>
+                                </div>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=io.github.ashfaqalizardaristoreinc.salah_prayer.salahprayerapp" target="_blank" rel="noopener noreferrer" class="flex items-start p-3 bg-sfsdc-light rounded-lg hover:bg-gray-100 transition border border-gray-200">
+                                <i class="fab fa-google-play text-sfsdc-blue mt-1 mr-3"></i>
+                                <div>
+                                    <h5 class="font-bold text-sfsdc-dark text-sm">Salah (Prayer) Tracker</h5>
+                                    <p class="text-xs text-gray-600">Comprehensive app to manage daily and Qaza prayers.</p>
+                                </div>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=io.github.ashfaqalizardaristoreinc.tasbihapp" target="_blank" rel="noopener noreferrer" class="flex items-start p-3 bg-sfsdc-light rounded-lg hover:bg-gray-100 transition border border-gray-200">
+                                <i class="fab fa-google-play text-sfsdc-blue mt-1 mr-3"></i>
+                                <div>
+                                    <h5 class="font-bold text-sfsdc-dark text-sm">Islamic Tasbih Counter</h5>
+                                    <p class="text-xs text-gray-600">Make your daily dhikr meaningful and organized.</p>
+                                </div>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.ashfaqalizardaristore.aazbrowserapp" target="_blank" rel="noopener noreferrer" class="flex items-start p-3 bg-sfsdc-light rounded-lg hover:bg-gray-100 transition border border-gray-200">
+                                <i class="fab fa-google-play text-sfsdc-blue mt-1 mr-3"></i>
+                                <div>
+                                    <h5 class="font-bold text-sfsdc-dark text-sm">AAZ Browser</h5>
+                                    <p class="text-xs text-gray-600">Mobile browser with Google Search integration.</p>
+                                </div>
+                            </a>
+                            <a href="https://ashfaqalizardaristore.co/" target="_blank" rel="noopener noreferrer" class="flex items-start p-3 bg-sfsdc-dark text-white rounded-lg hover:bg-opacity-90 transition">
+                                <i class="fas fa-globe text-sfsdc-blue mt-1 mr-3"></i>
+                                <div>
+                                    <h5 class="font-bold text-sm">Ashfaq Ali Zardari Store LLP</h5>
+                                    <p class="text-xs text-gray-300">Visit the official company website.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="bg-sfsdc-dark text-white pt-16 pb-8 border-t-4 border-sfsdc-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 border-b-2 border-sfsdc-blue inline-block pb-1">Contact Us</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-sfsdc-blue"></i>
+                            <span>SFSDC, SSC Office, 100 Campus,<br>SZABIST University, Block 5 Clifton,<br>Karachi, Pakistan, 75600</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-sfsdc-blue"></i>
+                            <a href="mailto:support.sfsdc@gmail.com" class="hover:text-sfsdc-blue transition">support.sfsdc@gmail.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-3 text-sfsdc-blue"></i>
+                            <a href="https://wa.me/923152260604" target="_blank" rel="noopener noreferrer" class="hover:text-sfsdc-blue transition">+92 315 2260604</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 border-b-2 border-sfsdc-blue inline-block pb-1">Quick Links</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="https://forms.gle/rc2qcRajJQksgqvG8" target="_blank" rel="noopener noreferrer" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Registration Form</a></li>
+                        <li><a href="https://calendar.app.google/cYxegPimRruYRomL7" target="_blank" rel="noopener noreferrer" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Book Interview Slot</a></li>
+                        <li><a href="https://szabist-future-software-developers-club.github.io/get-started/" target="_blank" rel="noopener noreferrer" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Official Website</a></li>
+                        <li><a href="#about" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> About SFSDC</a></li>
+                        <li><a href="#committee" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Our Leadership</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 border-b-2 border-sfsdc-blue inline-block pb-1">Follow Us</h3>
+                    <p class="text-gray-300 mb-4">Stay updated with our latest events, workshops, and opportunities.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/sfsdc.ssc.szabist" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-sfsdc-blue transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sfsdc.ssc.szabist/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-sfsdc-blue transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sfsdc.ssc.szabist/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-sfsdc-blue transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/SZABIST-Future-Software-Developers-Club" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-sfsdc-blue transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <div class="mt-8">
+                        <img class="h-16 w-auto" src="assets/logo-horizontal.png" alt="SFSDC Logo Footer">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; <span id="year"></span> SZABIST Future Software Developers Club (SFSDC). All rights reserved.</p>
+                <p class="mt-2">Operating under the Student Societies Council (SSC), SZABIST University.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Dynamic Year -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Dynamic Year in Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for anchor links (fallback for browsers that don't support CSS scroll-smooth)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
