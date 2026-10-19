@@ -34,6 +34,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/site.css">
 
     <script>
         tailwind.config = {
@@ -97,31 +98,43 @@
                     <img class="h-12 w-auto" src="assets/images/logo-square.png" alt="SFSDC Logo">
                     <span class="font-display font-bold text-xl hidden sm:block">SFSDC</span>
                 </div>
-                <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wider">
+                <div class="hidden lg:flex space-x-6 text-sm font-semibold uppercase tracking-wider">
                     <a href="#about" class="hover:text-sfsdc-blue transition">About</a>
                     <a href="#activities" class="hover:text-sfsdc-blue transition">Activities</a>
                     <a href="#specialties" class="hover:text-sfsdc-blue transition">Specialties</a>
                     <a href="#committee" class="hover:text-sfsdc-blue transition">Committee</a>
                     <a href="#president" class="hover:text-sfsdc-blue transition">President</a>
+                    <a href="teams.html" class="hover:text-sfsdc-blue transition">Team</a>
+                    <a href="news.html" class="hover:text-sfsdc-blue transition">News</a>
+                    <a href="blog.html" class="hover:text-sfsdc-blue transition">Blog</a>
+                    <a href="app.html" class="hover:text-sfsdc-blue transition">SFSDC App</a>
                     <a href="#contact" class="bg-sfsdc-blue hover:bg-blue-600 px-5 py-2 rounded-full transition">Contact Us</a>
                 </div>
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-white hover:text-sfsdc-blue focus:outline-none">
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-sfsdc-blue focus:outline-none" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
+        <div class="hidden lg:block border-t border-white/10">
+            <div id="site-controls" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-sfsdc-dark border-t border-gray-700">
+        <div id="mobile-menu" class="hidden lg:hidden bg-sfsdc-dark border-t border-gray-700">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">About</a>
                 <a href="#activities" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">Activities</a>
                 <a href="#specialties" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">Specialties</a>
                 <a href="#committee" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">Committee</a>
                 <a href="#president" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">President</a>
+                <a href="teams.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">Team &amp; Active Members</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">News &amp; Updates</a>
+                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">Blog</a>
+                <a href="app.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">SFSDC App</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-sfsdc-blue">Contact Us</a>
+                <div id="mobile-site-controls" class="px-3 py-3"></div>
             </div>
         </div>
     </nav>
@@ -191,6 +204,9 @@
                             <h4 class="font-bold text-lg">Community</h4>
                         </div>
                     </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="teams.html" class="inline-flex items-center gap-2 bg-sfsdc-blue hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full transition">Meet the active team <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </div>
         </section>
@@ -454,11 +470,39 @@
                                 </div>
                             </a>
                         </div>
+                        <a href="ashfaq-ali-zardari.html" class="mt-6 inline-flex items-center gap-2 text-sfsdc-blue font-semibold hover:underline">Read the Founder &amp; President/Chairperson profile <span aria-hidden="true">&rarr;</span></a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <p class="text-sm uppercase tracking-wider text-sfsdc-blue font-semibold mb-3">Explore more</p>
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-sfsdc-dark">Latest stories and insights</h2>
+            </div>
+            <div class="grid gap-8 md:grid-cols-2">
+                <a href="news.html" class="group overflow-hidden rounded-2xl border border-gray-200 bg-sfsdc-light shadow-sm hover:shadow-lg transition">
+                    <img src="assets/images/SFSDC SSC SZABIST 2k26-27 Team announcement soon.png" alt="SFSDC Team Announcement" class="h-56 w-full object-cover group-hover:scale-[1.02] transition duration-300">
+                    <div class="p-6">
+                        <span class="inline-flex items-center rounded-full bg-sfsdc-blue/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-sfsdc-blue">News &amp; Updates</span>
+                        <h3 class="mt-4 text-2xl font-bold text-sfsdc-dark">Keep up with club announcements</h3>
+                        <p class="mt-3 text-gray-600">Read the latest SFSDC stories, event updates, opportunities, and educational news from our student community.</p>
+                    </div>
+                </a>
+                <a href="blog.html" class="group overflow-hidden rounded-2xl border border-gray-200 bg-sfsdc-light shadow-sm hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Developer blog" class="h-56 w-full object-cover group-hover:scale-[1.02] transition duration-300">
+                    <div class="p-6">
+                        <span class="inline-flex items-center rounded-full bg-sfsdc-blue/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-sfsdc-blue">Blog</span>
+                        <h3 class="mt-4 text-2xl font-bold text-sfsdc-dark">Practical ideas for student developers</h3>
+                        <p class="mt-3 text-gray-600">Explore real-world guidance on portfolios, careers, open-source contribution, design thinking, and tech growth.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer / Contact Section -->
     <footer id="contact" class="bg-sfsdc-dark text-white pt-16 pb-8 border-t-4 border-sfsdc-blue">
@@ -492,6 +536,13 @@
                         <li><a href="https://szabist-future-software-developers-club.github.io/get-started/" target="_blank" rel="noopener noreferrer" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Official Website</a></li>
                         <li><a href="#about" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> About SFSDC</a></li>
                         <li><a href="#committee" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Our Leadership</a></li>
+                        <li><a href="teams.html" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Team &amp; Active Members</a></li>
+                        <li><a href="ashfaq-ali-zardari.html" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Founder &amp; President Profile</a></li>
+                        <li><a href="app.html" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Download the SFSDC App</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Terms &amp; Conditions</a></li>
+                        <li><a href="cookies.html" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Cookies</a></li>
+                        <li><a href="sitemap.html" class="hover:text-sfsdc-blue transition"><i class="fas fa-angle-right mr-2"></i> Sitemap</a></li>
                     </ul>
                 </div>
 
@@ -523,28 +574,20 @@
             <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
                 <p>&copy; <span id="year"></span> SZABIST Future Software Developers Club (SFSDC). All rights reserved.</p>
                 <p class="mt-2">Operating under the Student Societies Council (SSC), SZABIST University.</p>
+                <p class="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-2">
+                    <a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="terms-and-conditions.html" class="hover:text-white">Terms &amp; Conditions</a>
+                    <a href="cookies.html" class="hover:text-white">Cookies</a>
+                    <a href="sitemap.html" class="hover:text-white">Sitemap</a>
+                    <a href="https://wa.me/923152260604" target="_blank" rel="noopener noreferrer" aria-label="Contact SFSDC on WhatsApp" class="text-green-400 hover:text-green-300"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <button type="button" class="share-page-button hover:text-white" aria-label="Share this page"><i class="fas fa-share-alt"></i> Share</button>
+                </p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript for Mobile Menu and Dynamic Year -->
     <script>
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        const mobileLinks = menu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-
         // Dynamic Year in Footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -563,5 +606,6 @@
             });
         });
     </script>
+    <script src="assets/site.js" defer></script>
 </body>
 </html>

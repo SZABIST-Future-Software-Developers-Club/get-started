@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SFSDC blog articles for students, developers, and future tech leaders.">
+    <title>Blog | SFSDC</title>
+    <link rel="icon" type="image/png" href="assets/images/logo-square.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/site.css">
+</head>
+<body class="font-sans text-gray-800 bg-sfsdc-light antialiased">
+    <nav class="bg-sfsdc-dark text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex items-center gap-3" aria-label="SFSDC home">
+                    <img class="h-12 w-auto" src="assets/images/logo-square.png" alt="SFSDC logo">
+                    <span class="font-display font-bold text-xl">SFSDC</span>
+                </a>
+                <div class="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wider">
+                    <a href="index.html#about" class="hover:text-sfsdc-blue">About</a>
+                    <a href="teams.html" class="hover:text-sfsdc-blue">Team</a>
+                    <a href="news.html" class="hover:text-sfsdc-blue">News</a>
+                    <a href="blog.html" class="text-sfsdc-blue">Blog</a>
+                    <a href="app.html" class="hover:text-sfsdc-blue">SFSDC App</a>
+                    <a href="sitemap.html" class="hover:text-sfsdc-blue">Sitemap</a>
+                    <a href="index.html#contact" class="bg-sfsdc-blue px-5 py-2 rounded-full hover:bg-blue-600">Contact Us</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="hidden md:block border-t border-white/10"><div id="site-controls" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div></div>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-700">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html#about" class="block py-2">About</a>
+                <a href="teams.html" class="block py-2">Team &amp; Active Members</a>
+                <a href="news.html" class="block py-2">News &amp; Updates</a>
+                <a href="blog.html" class="block py-2">Blog</a>
+                <a href="app.html" class="block py-2">SFSDC App</a>
+                <a href="sitemap.html" class="block py-2">Sitemap</a>
+                <a href="index.html#contact" class="block py-2">Contact Us</a>
+                <div id="mobile-site-controls" class="border-t border-gray-700"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <header class="mb-10 text-center md:text-left">
+            <p class="text-sm uppercase tracking-wider text-sfsdc-blue font-semibold mb-3">Insights &amp; guidance</p>
+            <h1 class="font-display text-4xl md:text-5xl font-bold text-sfsdc-dark">Blog</h1>
+            <p class="mt-4 max-w-2xl text-gray-600">Career advice, practical writing, and development ideas for students who want to grow from curious learners to confident creators.</p>
+        </header>
+
+        <section id="blog-grid" class="content-grid" aria-live="polite"></section>
+
+        <nav class="pagination" aria-label="Blog pages">
+            <button id="blog-prev" type="button" class="page-action" data-page="prev">Previous</button>
+            <div id="blog-pagination" class="page-numbers" aria-label="Page numbers"></div>
+            <button id="blog-next" type="button" class="page-action" data-page="next">Next</button>
+        </nav>
+    </main>
+
+    <footer class="bg-sfsdc-dark text-white py-8 border-t-4 border-sfsdc-blue">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+            <p>&copy; <span class="current-year"></span> SFSDC, SZABIST University.</p>
+            <div class="flex flex-wrap justify-center items-center gap-4">
+                <a href="index.html" class="hover:text-sfsdc-blue">Home</a>
+                <a href="teams.html" class="hover:text-sfsdc-blue">Team</a>
+                <a href="news.html" class="hover:text-sfsdc-blue">News</a>
+                <a href="blog.html" class="hover:text-sfsdc-blue">Blog</a>
+                <a href="privacy-policy.html" class="hover:text-sfsdc-blue">Privacy</a>
+                <a href="terms-and-conditions.html" class="hover:text-sfsdc-blue">Terms</a>
+                <a href="cookies.html" class="hover:text-sfsdc-blue">Cookies</a>
+                <a href="sitemap.html" class="hover:text-sfsdc-blue">Sitemap</a>
+                <a href="https://wa.me/923152260604" target="_blank" rel="noopener noreferrer" class="text-green-400" aria-label="Contact SFSDC on WhatsApp"><i class="fab fa-whatsapp text-lg"></i></a>
+                <button type="button" class="share-page-button" aria-label="Share this page"><i class="fas fa-share-alt"></i></button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/site.js" defer></script>
+    <script>
+        const blogPosts = [
+            {
+                title: "Building a student developer community: the SFSDC vision",
+                tag: "Founder perspective",
+                date: "Club perspective",
+                image: "assets/images/SFSDC%20President_Chairperson%20-%20Ashfaq%20Ali%20Zardari%20Passport%20Size%20Picture.jpeg",
+                description: "A student technology community can make it easier to learn with peers, turn curiosity into projects, and connect technical interests with campus life.",
+                author: "SFSDC",
+                profileUrl: "ashfaq-ali-zardari.html",
+                profileLabel: "Ashfaq Ali Zardari's profile",
+                content: [
+                    "Starting a developer community begins with a simple idea: students benefit when there is space to learn together, exchange feedback, and work on practical ideas.",
+                    "SFSDC was founded by Ashfaq Ali Zardari at SZABIST University and operates under the SZABIST Student Council (SSC). Its committee structure brings together strategic leadership, specialist directors and leads, and students contributing across the general body.",
+                    "The aim is to support a culture of learning and collaboration around software development and technology. Explore the founder's profile and the current team structure to learn more."
+                ]
+            },
+            {
+                title: "What student leadership contributes to a developer community",
+                tag: "Leadership",
+                date: "Club perspective",
+                image: "assets/images/SFSDC%20President_Chairperson%20-%20Ashfaq%20Ali%20Zardari%20Passport%20Size%20Picture.jpeg",
+                description: "A clear leadership structure helps a student club coordinate its goals, keep teams connected, and make technical and community initiatives possible.",
+                author: "SFSDC",
+                profileUrl: "ashfaq-ali-zardari.html",
+                profileLabel: "Founder & President/Chairperson profile",
+                content: [
+                    "Student leadership is part strategy and part service. A President/Chairperson represents the club, guides its operations, and keeps its direction aligned with its governing student body.",
+                    "Within SFSDC, the Executive Committee provides governance and university liaison. Directors and leads focus on specialist areas, while the General Body Subcommittee supports delivery and helps members gain practical experience.",
+                    "This structure makes responsibilities visible and gives students different ways to contribute as their interests and experience grow."
+                ]
+            },
+            {
+                title: "What Laiba Aamir's appointment means for UI/UX at SFSDC",
+                tag: "Design",
+                date: "Appointment",
+                image: "assets/images/logo-square.png",
+                description: "Laiba Aamir joins the SFSDC Core Committee as Director of UI/UX, bringing dedicated leadership to design learning and product critique.",
+                author: "SFSDC",
+                profileUrl: "laiba-aamir.html",
+                profileLabel: "Laiba Aamir's profile",
+                content: [
+                    "SFSDC welcomes Laiba Aamir to the Core Committee as Director of UI/UX. Her appointment establishes dedicated leadership for the club's design vertical.",
+                    "Laiba's responsibilities include managing UI/UX bootcamps, critiquing software designs, and helping collaborative multi-platform projects bring aesthetic appeal together with functional logic.",
+                    "Her focus on creative vision and leadership supports design learning across the club. Explore her profile for experience, education, selected projects, and skills."
+                ]
+            },
+            {
+                title: "How to build a professional developer portfolio",
+                tag: "Career",
+                date: "May 04, 2026",
+                image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+                description: "A strong portfolio is more than a list of projects; it is a story of what you solved, why it mattered, and how you worked with others.",
+                accent: "Read article"
+            },
+            {
+                title: "Why open-source contribution matters for students",
+                tag: "Development",
+                date: "May 19, 2026",
+                image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80",
+                description: "Collaborative coding teaches documentation discipline, code review culture, and the habits of working in real-world engineering teams.",
+                accent: "Read article"
+            },
+            {
+                title: "Design features that make products easier to trust",
+                tag: "Design",
+                date: "June 03, 2026",
+                image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+                description: "Clear navigation, consistent spacing, and thoughtful feedback loops help users feel confident while using a digital product.",
+                accent: "Read article"
+            },
+            {
+                title: "What interviewers look for in a student project",
+                tag: "Interviews",
+                date: "June 17, 2026",
+                image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                description: "Presentation, engineering decisions, and learning outcomes often matter as much as the final result when teams assess student work.",
+                accent: "Read article"
+            },
+            {
+                title: "How to turn a hackathon idea into a launch-ready concept",
+                tag: "Innovation",
+                date: "July 01, 2026",
+                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+                description: "The strongest hackathon projects tell a clear story, solve a genuine problem, and provide a clean path to refinement after the event ends.",
+                accent: "Read article"
+            },
+            {
+                title: "The habits that make first internships successful",
+                tag: "Growth",
+                date: "July 14, 2026",
+                image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+                description: "Students who ask thoughtful questions, document their progress, and learn from feedback are the ones who stand out in early professional settings.",
+                accent: "Read article"
+            }
+        ];
+
+        const pageSize = 3;
+        let currentPage = 1;
+        const grid = document.getElementById('blog-grid');
+        const pagination = document.getElementById('blog-pagination');
+        const prevButton = document.getElementById('blog-prev');
+        const nextButton = document.getElementById('blog-next');
+
+        function renderBlog() {
+            const totalPages = Math.ceil(blogPosts.length / pageSize);
+            const startIndex = (currentPage - 1) * pageSize;
+            const visiblePosts = blogPosts.slice(startIndex, startIndex + pageSize);
+
+            grid.innerHTML = visiblePosts.map(function (post) {
+                return `
+                    <article class="content-card">
+                        <img src="${post.image}" alt="${post.title}" />
+                        <div class="content-card-body">
+                            <div class="card-topline">
+                                <span class="badge">${post.tag}</span>
+                                <span class="date-label">${post.date}</span>
+                            </div>
+                            <h2>${post.title}</h2>
+                            <p>${post.description}</p>
+                            ${post.content ? `
+                                <details class="article-expansion">
+                                    <summary>Read full article</summary>
+                                    <div class="article-expansion-content">
+                                        ${post.content.map(function (paragraph) { return `<p>${paragraph}</p>`; }).join('')}
+                                        <p><strong>By:</strong> ${post.author}</p>
+                                        <p><a href="${post.profileUrl}" class="read-more">${post.profileLabel} <span aria-hidden="true">&rarr;</span></a></p>
+                                    </div>
+                                </details>
+                            ` : `<a href="index.html#contact" class="read-more">${post.accent}</a>`}
+                        </div>
+                    </article>
+                `;
+            }).join('');
+
+            const pageNumbers = [];
+            const startPage = Math.max(1, currentPage - 1);
+            const endPage = Math.min(totalPages, currentPage + 1);
+
+            for (let page = startPage; page <= endPage; page += 1) {
+                pageNumbers.push(page);
+            }
+
+            pagination.innerHTML = pageNumbers.map(function (pageNumber) {
+                const active = pageNumber === currentPage;
+                return `<button type="button" class="page-number${active ? ' is-active' : ''}" data-page="${pageNumber}" aria-label="Page ${pageNumber}"${active ? ' aria-current="page"' : ''}>${pageNumber}</button>`;
+            }).join('');
+
+            prevButton.disabled = currentPage === 1;
+            nextButton.disabled = currentPage === totalPages;
+            prevButton.setAttribute('aria-disabled', String(prevButton.disabled));
+            nextButton.setAttribute('aria-disabled', String(nextButton.disabled));
+        }
+
+        pagination.addEventListener('click', function (event) {
+            const button = event.target.closest('[data-page]');
+            if (!button) return;
+            const pageNumber = Number(button.dataset.page);
+            if (!Number.isNaN(pageNumber)) {
+                currentPage = pageNumber;
+                renderBlog();
+            }
+        });
+
+        prevButton.addEventListener('click', function () {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                renderBlog();
+            }
+        });
+
+        nextButton.addEventListener('click', function () {
+            const totalPages = Math.ceil(blogPosts.length / pageSize);
+            if (currentPage < totalPages) {
+                currentPage += 1;
+                renderBlog();
+            }
+        });
+
+        renderBlog();
+    </script>
+</body>
+</html>

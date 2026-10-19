@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SFSDC news and updates from the club's latest events, announcements, and opportunities.">
+    <title>News &amp; Updates | SFSDC</title>
+    <link rel="icon" type="image/png" href="assets/images/logo-square.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/site.css">
+</head>
+<body class="font-sans text-gray-800 bg-sfsdc-light antialiased">
+    <nav class="bg-sfsdc-dark text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex items-center gap-3" aria-label="SFSDC home">
+                    <img class="h-12 w-auto" src="assets/images/logo-square.png" alt="SFSDC logo">
+                    <span class="font-display font-bold text-xl">SFSDC</span>
+                </a>
+                <div class="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wider">
+                    <a href="index.html#about" class="hover:text-sfsdc-blue">About</a>
+                    <a href="teams.html" class="hover:text-sfsdc-blue">Team</a>
+                    <a href="news.html" class="text-sfsdc-blue">News</a>
+                    <a href="blog.html" class="hover:text-sfsdc-blue">Blog</a>
+                    <a href="app.html" class="hover:text-sfsdc-blue">SFSDC App</a>
+                    <a href="sitemap.html" class="hover:text-sfsdc-blue">Sitemap</a>
+                    <a href="index.html#contact" class="bg-sfsdc-blue px-5 py-2 rounded-full hover:bg-blue-600">Contact Us</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="hidden md:block border-t border-white/10"><div id="site-controls" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div></div>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-700">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html#about" class="block py-2">About</a>
+                <a href="teams.html" class="block py-2">Team &amp; Active Members</a>
+                <a href="news.html" class="block py-2">News &amp; Updates</a>
+                <a href="blog.html" class="block py-2">Blog</a>
+                <a href="app.html" class="block py-2">SFSDC App</a>
+                <a href="sitemap.html" class="block py-2">Sitemap</a>
+                <a href="index.html#contact" class="block py-2">Contact Us</a>
+                <div id="mobile-site-controls" class="border-t border-gray-700"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <header class="mb-10 text-center md:text-left">
+            <p class="text-sm uppercase tracking-wider text-sfsdc-blue font-semibold mb-3">Latest updates</p>
+            <h1 class="font-display text-4xl md:text-5xl font-bold text-sfsdc-dark">News &amp; Updates</h1>
+            <p class="mt-4 max-w-2xl text-gray-600">Follow announcements, workshops, opportunities, and the newest stories from SFSDC and the wider student technology community.</p>
+        </header>
+
+        <section id="news-grid" class="content-grid" aria-live="polite"></section>
+
+        <nav class="pagination" aria-label="News pages">
+            <button id="news-prev" type="button" class="page-action" data-page="prev">Previous</button>
+            <div id="news-pagination" class="page-numbers" aria-label="Page numbers"></div>
+            <button id="news-next" type="button" class="page-action" data-page="next">Next</button>
+        </nav>
+    </main>
+
+    <footer class="bg-sfsdc-dark text-white py-8 border-t-4 border-sfsdc-blue">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+            <p>&copy; <span class="current-year"></span> SFSDC, SZABIST University.</p>
+            <div class="flex flex-wrap justify-center items-center gap-4">
+                <a href="index.html" class="hover:text-sfsdc-blue">Home</a>
+                <a href="teams.html" class="hover:text-sfsdc-blue">Team</a>
+                <a href="news.html" class="hover:text-sfsdc-blue">News</a>
+                <a href="blog.html" class="hover:text-sfsdc-blue">Blog</a>
+                <a href="privacy-policy.html" class="hover:text-sfsdc-blue">Privacy</a>
+                <a href="terms-and-conditions.html" class="hover:text-sfsdc-blue">Terms</a>
+                <a href="cookies.html" class="hover:text-sfsdc-blue">Cookies</a>
+                <a href="sitemap.html" class="hover:text-sfsdc-blue">Sitemap</a>
+                <a href="https://wa.me/923152260604" target="_blank" rel="noopener noreferrer" class="text-green-400" aria-label="Contact SFSDC on WhatsApp"><i class="fab fa-whatsapp text-lg"></i></a>
+                <button type="button" class="share-page-button" aria-label="Share this page"><i class="fas fa-share-alt"></i></button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/site.js" defer></script>
+    <script>
+        const newsPosts = [
+            {
+                title: "Meet Ashfaq Ali Zardari, Founder of SFSDC",
+                tag: "Founder",
+                date: "Leadership profile",
+                image: "assets/images/SFSDC%20President_Chairperson%20-%20Ashfaq%20Ali%20Zardari%20Passport%20Size%20Picture.jpeg",
+                description: "Meet the founder who established the SZABIST Future Software Developers Club to create a home for student developers, builders, and technology enthusiasts.",
+                author: "SFSDC",
+                profileUrl: "ashfaq-ali-zardari.html",
+                profileLabel: "Ashfaq Ali Zardari's profile",
+                content: [
+                    "Ashfaq Ali Zardari founded the SZABIST Future Software Developers Club (SFSDC), a student community operating under the SZABIST Student Council (SSC).",
+                    "The club brings together students interested in software development and technology, with a structure spanning executive leadership, specialist directors and leads, and a general body subcommittee.",
+                    "Learn more about Ashfaq's background and the club's leadership structure on the Founder & President/Chairperson profile."
+                ]
+            },
+            {
+                title: "Ashfaq Ali Zardari serves as SFSDC President/Chairperson",
+                tag: "Leadership",
+                date: "Leadership update",
+                image: "assets/images/SFSDC%20President_Chairperson%20-%20Ashfaq%20Ali%20Zardari%20Passport%20Size%20Picture.jpeg",
+                description: "SFSDC's President/Chairperson guides club operations, university liaison, and strategic direction in alignment with the SZABIST Student Council.",
+                author: "SFSDC",
+                profileUrl: "ashfaq-ali-zardari.html",
+                profileLabel: "Founder & President/Chairperson profile",
+                content: [
+                    "Ashfaq Ali Zardari serves as Founder and President/Chairperson of SFSDC at SZABIST University.",
+                    "The role oversees club operations, aligns strategy with the SZABIST Student Council (SSC), and represents the club. The wider committee structure includes executive roles, core directors and leads, and general body officers and associates.",
+                    "Meet the active members and see the full team hierarchy on the Team & Active Members page."
+                ]
+            },
+            {
+                title: "SFSDC welcomes Laiba Aamir as Director of UI/UX",
+                tag: "Appointment",
+                date: "Member update",
+                image: "assets/images/logo-square.png",
+                description: "Laiba Aamir joins the Core Committee to lead SFSDC's UI/UX design vertical, including design bootcamps, design critiques, and usability-minded collaboration.",
+                author: "SFSDC",
+                profileUrl: "laiba-aamir.html",
+                profileLabel: "Laiba Aamir's profile",
+                content: [
+                    "SFSDC welcomes Laiba Aamir as Director of UI/UX in the Core Committee. Her role focuses on bringing creative vision and leadership to the club's design vertical.",
+                    "Her responsibilities include managing UI/UX bootcamps, critiquing software designs, and helping collaborative, multi-platform projects combine visual appeal with functional clarity.",
+                    "The appointment adds a dedicated design leadership role to the club's technical and creative structure. View the current team hierarchy on the Team & Active Members page."
+                ]
+            },
+            {
+                title: "SFSDC Team Announcement Coming Soon",
+                tag: "Announcement",
+                date: "Upcoming",
+                image: "assets/images/SFSDC SSC SZABIST 2k26-27 Team announcement soon.png",
+                description: "The official SFSDC team announcement for the 2026–27 cycle is being prepared. Watch this space for the featured leadership and committee reveal.",
+                accent: "Read more"
+            },
+            {
+                title: "Digital mentorship week opens for students",
+                tag: "Mentorship",
+                date: "May 12, 2026",
+                image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+                description: "Students will get one-on-one guidance on resume building, portfolio strategy, and project planning across design, development, and leadership tracks.",
+                accent: "View details"
+            },
+            {
+                title: "Web development workshop registration now open",
+                tag: "Workshop",
+                date: "May 20, 2026",
+                image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                description: "From HTML and CSS fundamentals to responsive UI design, this workshop helps members turn ideas into polished, production-ready experiences.",
+                accent: "Register now"
+            },
+            {
+                title: "Open-source contribution challenge announced",
+                tag: "Community",
+                date: "June 04, 2026",
+                image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80",
+                description: "SFSDC is launching a community challenge that encourages students to contribute to open-source tools, documentation, and collaborative learning projects.",
+                accent: "Explore challenge"
+            },
+            {
+                title: "Student innovation night highlights ideas from campus teams",
+                tag: "Event",
+                date: "June 18, 2026",
+                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+                description: "Members showcased prototypes, startup concepts, and technical experiments while connecting with industry mentors and student leaders.",
+                accent: "See highlights"
+            },
+            {
+                title: "Career readiness bootcamp returns for the new term",
+                tag: "Career",
+                date: "July 02, 2026",
+                image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+                description: "The next bootcamp focuses on scholarships, internships, interview coaching, and networking strategies for aspiring software professionals.",
+                accent: "Join cohort"
+            }
+        ];
+
+        const pageSize = 3;
+        let currentPage = 1;
+        const grid = document.getElementById('news-grid');
+        const pagination = document.getElementById('news-pagination');
+        const prevButton = document.getElementById('news-prev');
+        const nextButton = document.getElementById('news-next');
+
+        function renderNews() {
+            const totalPages = Math.ceil(newsPosts.length / pageSize);
+            const startIndex = (currentPage - 1) * pageSize;
+            const visiblePosts = newsPosts.slice(startIndex, startIndex + pageSize);
+
+            grid.innerHTML = visiblePosts.map(function (post) {
+                return `
+                    <article class="content-card">
+                        <img src="${post.image}" alt="${post.title}" />
+                        <div class="content-card-body">
+                            <div class="card-topline">
+                                <span class="badge">${post.tag}</span>
+                                <span class="date-label">${post.date}</span>
+                            </div>
+                            <h2>${post.title}</h2>
+                            <p>${post.description}</p>
+                            ${post.content ? `
+                                <details class="article-expansion">
+                                    <summary>Read full update</summary>
+                                    <div class="article-expansion-content">
+                                        ${post.content.map(function (paragraph) { return `<p>${paragraph}</p>`; }).join('')}
+                                        <p><strong>By:</strong> ${post.author}</p>
+                                        <p><a href="${post.profileUrl}" class="read-more">${post.profileLabel} <span aria-hidden="true">&rarr;</span></a></p>
+                                    </div>
+                                </details>
+                            ` : `<a href="index.html#contact" class="read-more">${post.accent}</a>`}
+                        </div>
+                    </article>
+                `;
+            }).join('');
+
+            const pageNumbers = [];
+            const startPage = Math.max(1, currentPage - 1);
+            const endPage = Math.min(totalPages, currentPage + 1);
+
+            for (let page = startPage; page <= endPage; page += 1) {
+                pageNumbers.push(page);
+            }
+
+            pagination.innerHTML = pageNumbers.map(function (pageNumber) {
+                const active = pageNumber === currentPage;
+                return `<button type="button" class="page-number${active ? ' is-active' : ''}" data-page="${pageNumber}" aria-label="Page ${pageNumber}"${active ? ' aria-current="page"' : ''}>${pageNumber}</button>`;
+            }).join('');
+
+            prevButton.disabled = currentPage === 1;
+            nextButton.disabled = currentPage === totalPages;
+            prevButton.setAttribute('aria-disabled', String(prevButton.disabled));
+            nextButton.setAttribute('aria-disabled', String(nextButton.disabled));
+        }
+
+        pagination.addEventListener('click', function (event) {
+            const button = event.target.closest('[data-page]');
+            if (!button) return;
+            const pageNumber = Number(button.dataset.page);
+            if (!Number.isNaN(pageNumber)) {
+                currentPage = pageNumber;
+                renderNews();
+            }
+        });
+
+        prevButton.addEventListener('click', function () {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                renderNews();
+            }
+        });
+
+        nextButton.addEventListener('click', function () {
+            const totalPages = Math.ceil(newsPosts.length / pageSize);
+            if (currentPage < totalPages) {
+                currentPage += 1;
+                renderNews();
+            }
+        });
+
+        renderNews();
+    </script>
+</body>
+</html>
